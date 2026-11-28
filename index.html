@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Rishika Rathore | Computer Engineering Student Portfolio">
+    <title>Rishika Rathore — Portfolio</title>
+
+    <!-- External libraries and fonts -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&display=swap" rel="stylesheet">
+
+    <!-- Tailwind theme configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        canvas: '#F8FAFC',
+                        surface: '#FFFFFF',
+                        slateInk: '#0F172A',
+                        slateMuted: '#64748B',
+                        slateBorder: '#E2E8F0',
+                        accentTeal: '#0D9488',
+                        accentBlue: '#2563EB',
+                        subtleBg: '#F1F5F9'
+                    },
+                    fontFamily: {
+                        sans: ['DM Sans', 'sans-serif'],
+                        serif: ['Fraunces', 'serif']
+                    }
+                }
+            }
+        };
+    </script>
+
+    <!-- Main stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="antialiased selection:bg-blue-100 selection:text-slateInk">
+
+    <!-- Floating navigation -->
+    <header class="fixed top-4 inset-x-0 z-50 px-4">
+        <nav class="pill-nav max-w-4xl mx-auto px-5 py-2.5 rounded-full flex items-center justify-between">
+            <a href="#home" class="font-editorial font-bold text-lg tracking-tight text-slateInk flex items-center gap-2 pl-2">
+                <span class="w-2.5 h-2.5 rounded-full bg-accentTeal inline-block"></span>
+                RISHIKA RATHORE
+            </a>
+
+            <div class="hidden md:flex items-center gap-1">
+                <a href="#home" class="nav-pill-link active px-4 py-1.5 rounded-full text-xs font-semibold text-slateMuted">Home</a>
+                <a href="#about" class="nav-pill-link px-4 py-1.5 rounded-full text-xs font-semibold text-slateMuted">About</a>
+                <a href="#work" class="nav-pill-link px-4 py-1.5 rounded-full text-xs font-semibold text-slateMuted">Work</a>
+                <a href="#skills" class="nav-pill-link px-4 py-1.5 rounded-full text-xs font-semibold text-slateMuted">Toolkit</a>
+                <a href="#contact" class="nav-pill-link px-4 py-1.5 rounded-full text-xs font-semibold text-slateMuted">Say Hi</a>
+            </div>
+
+            <a href="#contact" class="hidden sm:inline-flex items-center gap-1.5 text-xs font-bold px-4 py-2 rounded-full bg-slate-100 text-slateInk hover:bg-slate-200 transition">
+                Let's Talk <i class="fas fa-arrow-up-right-from-square text-[10px]"></i>
+            </a>
+
+            <button id="menu-toggle" class="md:hidden p-2 rounded-full text-slateInk hover:bg-slate-100" aria-label="Toggle navigation" aria-expanded="false">
+                <i class="fas fa-bars text-base"></i>
+            </button>
+        </nav>
+
+        <div id="mobile-menu" class="hidden md:hidden max-w-4xl mx-auto mt-2 pill-nav rounded-3xl p-5 shadow-lg">
+            <div class="flex flex-col space-y-2 text-center">
+                <a href="#home" class="py-2 rounded-xl font-semibold text-sm text-slateInk hover:bg-slate-100">Home</a>
+                <a href="#about" class="py-2 rounded-xl font-semibold text-sm text-slateInk hover:bg-slate-100">About</a>
+                <a href="#work" class="py-2 rounded-xl font-semibold text-sm text-slateInk hover:bg-slate-100">Work</a>
+                <a href="#skills" class="py-2 rounded-xl font-semibold text-sm text-slateInk hover:bg-slate-100">Toolkit</a>
+                <a href="#contact" class="py-2 rounded-xl font-semibold text-sm text-slateInk hover:bg-slate-100">Say Hi</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero -->
+        <section id="home" class="min-h-screen flex items-center relative overflow-hidden pt-28 pb-16">
+            <div class="pro-glow w-[30rem] h-[30rem] bg-blue-100 top-10 -left-20"></div>
+            <div class="pro-glow w-[26rem] h-[26rem] bg-teal-50 top-32 right-0"></div>
+
+            <div class="container mx-auto px-6 max-w-6xl relative z-10">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                    <div class="lg:col-span-7" data-aos="fade-up" data-aos-duration="850">
+                        <div class="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-white border border-slate-200 shadow-sm mb-6">
+                            <span class="relative flex h-2 w-2">
+                                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-accentTeal opacity-75"></span>
+                                <span class="relative inline-flex rounded-full h-2 w-2 bg-accentTeal"></span>
+                            </span>
+                            <span class="text-xs font-bold tracking-wider text-slateMuted uppercase">Computer Engineering Undergrad &bull; Indore</span>
+                        </div>
+
+                        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold leading-[1.12] text-slateInk mb-6">
+                            Engineering robust digital solutions with <span class="italic font-medium text-accentBlue">precision</span> &amp; clarity.
+                        </h1>
+
+                        <p class="text-base sm:text-lg text-slateMuted leading-relaxed mb-8 max-w-xl">
+                            I'm <strong class="text-slateInk font-semibold">Rishika Rathore</strong>—a Computer Engineering student dedicated to combining sound technical fundamentals with structured planning and effective cross-functional teamwork.
+                        </p>
+
+                        <div class="flex flex-wrap items-center gap-4">
+                            <a href="#work" class="btn-executive font-bold text-sm py-3.5 px-8 rounded-full inline-flex items-center gap-2">
+                                Explore Selected Work <i class="fas fa-arrow-down text-xs"></i>
+                            </a>
+                            <a href="#about" class="px-7 py-3.5 rounded-full text-sm font-bold text-slateInk bg-white border border-slate-200 hover:border-slate-400 transition">
+                                More About Me
+                            </a>
+                        </div>
+
+                        <div class="mt-12 pt-8 border-t border-slate-200 grid grid-cols-3 gap-4 max-w-md">
+                            <div>
+                                <p class="font-editorial text-2xl font-bold text-slateInk">B.Tech</p>
+                                <p class="text-xs text-slateMuted font-medium">Computer Engg.</p>
+                            </div>
+                            <div>
+                                <p class="font-editorial text-2xl font-bold text-accentBlue">Web &amp; AI</p>
+                                <p class="text-xs text-slateMuted font-medium">Domain Focus</p>
+                            </div>
+                            <div>
+                                <p class="font-editorial text-2xl font-bold text-accentTeal">Team Lead</p>
+                                <p class="text-xs text-slateMuted font-medium">Coordination</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="lg:col-span-5 flex justify-center" data-aos="fade-left" data-aos-duration="900">
+                        <div class="relative">
+                            <div class="absolute -inset-4 bg-gradient-to-tr from-slate-200 to-slate-100 rounded-[200px_200px_32px_32px] -rotate-2 opacity-70"></div>
+                            <div class="relative arch-frame w-72 h-80 sm:w-80 sm:h-96 bg-slate-200 overflow-hidden flex items-center justify-center">
+                                <img src="images/profile.jpg" alt="Portrait of Rishika Rathore" class="w-full h-full object-cover"
+                                     onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                                <div class="hidden w-full h-full flex-col items-center justify-center text-center p-6 bg-gradient-to-b from-slate-100 to-slate-200">
+                                    <div class="w-16 h-16 rounded-full bg-white flex items-center justify-center text-slateInk text-2xl mb-3 shadow-sm">
+                                        <i class="fas fa-user"></i>
+                                    </div>
+                                    <p class="font-editorial font-bold text-slateInk text-base">Rishika Rathore</p>
+                                    <p class="text-xs text-slateMuted mt-1">Computer Engineering Student</p>
+                                </div>
+                            </div>
+
+                            <div class="absolute -bottom-4 -left-4 bg-white px-4 py-2.5 rounded-2xl shadow-lg border border-slate-200 flex items-center gap-2.5">
+                                <span class="w-8 h-8 rounded-xl bg-teal-50 flex items-center justify-center text-accentTeal text-sm">
+                                    <i class="fas fa-code"></i>
+                                </span>
+                                <div>
+                                    <p class="text-[11px] font-bold uppercase tracking-wider text-slateMuted">Status</p>
+                                    <p class="text-xs font-bold text-slateInk">Open to Internships</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About -->
+        <section id="about" class="py-24 relative">
+            <div class="container mx-auto px-6 max-w-6xl relative z-10">
+                <div class="flex flex-col md:flex-row md:items-end justify-between mb-12" data-aos="fade-up">
+                    <div>
+                        <span class="text-xs font-bold uppercase tracking-widest text-accentBlue">01 — Background</span>
+                        <h2 class="text-3xl md:text-4xl font-bold text-slateInk mt-2">Analytical thinking meets <span class="italic font-medium text-accentTeal">execution.</span></h2>
+                    </div>
+                    <p class="text-sm text-slateMuted max-w-md mt-3 md:mt-0">
+                        Combining foundational computer science principles with professional discipline and technical curiosity.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+                    <div class="md:col-span-7 bento-card p-8 md:p-10 flex flex-col justify-between" data-aos="fade-up" data-aos-delay="50">
+                        <div>
+                            <span class="inline-block px-3 py-1 rounded-full bg-slate-100 text-slateInk text-xs font-bold mb-5">Professional Profile</span>
+                            <h3 class="text-2xl font-bold text-slateInk mb-4">My approach to engineering &amp; collaboration</h3>
+                            <p class="text-slateMuted leading-relaxed mb-4">
+                                As a Computer Engineering student, I enjoy examining complex systems and translating them into structured, reliable software solutions. My academic focus spans web application development, core algorithms, and cybersecurity fundamentals.
+                            </p>
+                            <p class="text-slateMuted leading-relaxed">
+                                Equally important to me is project execution—organizing team workflows, establishing clear timelines, and maintaining transparent communication so collaborative initiatives succeed seamlessly.
+                            </p>
+                        </div>
+                        <div class="mt-8 pt-6 border-t border-slate-100 flex flex-wrap gap-2">
+                            <span class="px-3.5 py-1.5 rounded-full bg-slate-50 border border-slate-200 text-xs font-semibold text-slateInk">Structured Problem-Solving</span>
+                            <span class="px-3.5 py-1.5 rounded-full bg-slate-50 border border-slate-200 text-xs font-semibold text-slateInk">Clear Technical Communication</span>
+                            <span class="px-3.5 py-1.5 rounded-full bg-slate-50 border border-slate-200 text-xs font-semibold text-slateInk">Project Coordination</span>
+                        </div>
+                    </div>
+
+                    <div class="md:col-span-5 flex flex-col gap-6">
+                        <div class="rounded-[1.5rem] p-8 bg-gradient-to-br from-slate-900 to-slate-800 text-white shadow-md flex-1 flex flex-col justify-between" data-aos="fade-up" data-aos-delay="120">
+                            <div class="w-11 h-11 rounded-2xl bg-white/10 flex items-center justify-center text-teal-400 text-lg mb-4">
+                                <i class="fas fa-quote-left"></i>
+                            </div>
+                            <p class="font-editorial text-xl font-medium text-slate-100 leading-snug mb-4">
+                                "Excellence in engineering is achieved through rigorous fundamentals and collaborative clarity."
+                            </p>
+                            <p class="text-xs font-bold uppercase tracking-wider text-slate-400">Guiding Engineering Philosophy</p>
+                        </div>
+
+                        <div class="grid grid-cols-2 gap-4" data-aos="fade-up" data-aos-delay="180">
+                            <div class="bento-card p-5">
+                                <i class="fas fa-location-dot text-accentBlue mb-2 text-base"></i>
+                                <p class="text-[11px] font-bold uppercase tracking-wider text-slateMuted">Location</p>
+                                <p class="font-bold text-sm text-slateInk mt-0.5">Indore, India</p>
+                            </div>
+                            <div class="bento-card p-5">
+                                <i class="fas fa-graduation-cap text-accentTeal mb-2 text-base"></i>
+                                <p class="text-[11px] font-bold uppercase tracking-wider text-slateMuted">Degree</p>
+                                <p class="font-bold text-sm text-slateInk mt-0.5">B.Tech CSE</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects -->
+        <section id="work" class="py-24 relative">
+            <div class="container mx-auto px-6 max-w-6xl relative z-10">
+                <div class="flex flex-col md:flex-row md:items-end justify-between mb-14" data-aos="fade-up">
+                    <div>
+                        <span class="text-xs font-bold uppercase tracking-widest text-accentTeal">02 — Portfolio</span>
+                        <h2 class="text-3xl md:text-4xl font-bold text-slateInk mt-2">Featured Projects &amp; <span class="italic font-medium text-accentBlue">Builds.</span></h2>
+                    </div>
+                    <p class="text-sm text-slateMuted max-w-md mt-3 md:mt-0">
+                        Academic developments, hackathon initiatives, and technical case studies demonstrating practical engineering application.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-7">
+                    <article class="bento-card p-8 flex flex-col justify-between group" data-aos="fade-up" data-aos-delay="50">
+                        <div>
+                            <div class="flex items-center justify-between mb-6">
+                                <span class="w-12 h-12 rounded-2xl bg-blue-50 flex items-center justify-center text-accentBlue text-lg group-hover:scale-105 transition-transform"><i class="fas fa-compass"></i></span>
+                                <span class="px-3.5 py-1 rounded-full bg-blue-50 text-accentBlue text-xs font-bold">Web Application</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-slateInk mb-3 group-hover:text-accentBlue transition-colors">Student Opportunity Platform</h3>
+                            <p class="text-sm text-slateMuted leading-relaxed mb-6">
+                                A centralized web portal concept designed to streamline the discovery of internships, campus events, and academic resources for students.
+                            </p>
+                        </div>
+                        <div class="pt-5 border-t border-slate-100 flex items-center justify-between gap-3">
+                            <div class="flex flex-wrap gap-2">
+                                <span class="tech-tag">HTML</span><span class="tech-tag">CSS</span><span class="tech-tag">JavaScript</span>
+                            </div>
+                            <span class="text-xs font-bold text-accentBlue">Frontend UI</span>
+                        </div>
+                    </article>
+
+                    <article class="bento-card p-8 flex flex-col justify-between group" data-aos="fade-up" data-aos-delay="120">
+                        <div>
+                            <div class="flex items-center justify-between mb-6">
+                                <span class="w-12 h-12 rounded-2xl bg-teal-50 flex items-center justify-center text-accentTeal text-lg group-hover:scale-105 transition-transform"><i class="fas fa-shield-halved"></i></span>
+                                <span class="px-3.5 py-1 rounded-full bg-teal-50 text-accentTeal text-xs font-bold">Cybersecurity • AI</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-slateInk mb-3 group-hover:text-accentTeal transition-colors">One-Way Network Threat Detection</h3>
+                            <p class="text-sm text-slateMuted leading-relaxed mb-6">
+                                A collaborative cybersecurity build exploring passive threat identification via unidirectional traffic monitoring, metadata inspection, and anomaly spotting.
+                            </p>
+                        </div>
+                        <div class="pt-5 border-t border-slate-100 flex items-center justify-between gap-3">
+                            <div class="flex flex-wrap gap-2">
+                                <span class="tech-tag">Cybersecurity</span><span class="tech-tag">AI / ML</span>
+                            </div>
+                            <span class="text-xs font-bold text-accentTeal">Team Project</span>
+                        </div>
+                    </article>
+
+                    <article class="bento-card p-8 flex flex-col justify-between group" data-aos="fade-up" data-aos-delay="180">
+                        <div>
+                            <div class="flex items-center justify-between mb-6">
+                                <span class="w-12 h-12 rounded-2xl bg-slate-100 flex items-center justify-center text-slateInk text-lg group-hover:scale-105 transition-transform"><i class="fas fa-clipboard-check"></i></span>
+                                <span class="px-3.5 py-1 rounded-full bg-slate-100 text-slateInk text-xs font-bold">Utility System</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-slateInk mb-3 group-hover:text-slate-700 transition-colors">Attendance Management System</h3>
+                            <p class="text-sm text-slateMuted leading-relaxed mb-6">
+                                An interactive browser-based attendance tracking tool built to practice DOM manipulation, form validation, and responsive interface design.
+                            </p>
+                        </div>
+                        <div class="pt-5 border-t border-slate-100 flex items-center justify-between gap-3">
+                            <div class="flex flex-wrap gap-2">
+                                <span class="tech-tag">HTML</span><span class="tech-tag">CSS</span><span class="tech-tag">JavaScript</span>
+                            </div>
+                            <span class="text-xs font-bold text-slateInk">Web Utility</span>
+                        </div>
+                    </article>
+
+                    <article class="bento-card p-8 flex flex-col justify-between group" data-aos="fade-up" data-aos-delay="240">
+                        <div>
+                            <div class="flex items-center justify-between mb-6">
+                                <span class="w-12 h-12 rounded-2xl bg-indigo-50 flex items-center justify-center text-indigo-600 text-lg group-hover:scale-105 transition-transform"><i class="fas fa-people-group"></i></span>
+                                <span class="px-3.5 py-1 rounded-full bg-indigo-50 text-indigo-600 text-xs font-bold">Leadership</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-slateInk mb-3 group-hover:text-indigo-600 transition-colors">Team &amp; Event Coordination</h3>
+                            <p class="text-sm text-slateMuted leading-relaxed mb-6">
+                                Leadership experience organizing student initiatives—aligning team members, delegating responsibilities, managing timelines, and ensuring successful project delivery.
+                            </p>
+                        </div>
+                        <div class="pt-5 border-t border-slate-100 flex items-center justify-between gap-3">
+                            <div class="flex flex-wrap gap-2">
+                                <span class="tech-tag">Planning</span><span class="tech-tag">Operations</span>
+                            </div>
+                            <span class="text-xs font-bold text-indigo-600">Management</span>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills -->
+        <section id="skills" class="py-24 relative">
+            <div class="container mx-auto px-6 max-w-5xl relative z-10">
+                <div class="text-center max-w-xl mx-auto mb-14" data-aos="fade-up">
+                    <span class="text-xs font-bold uppercase tracking-widest text-accentBlue">03 — Capabilities</span>
+                    <h2 class="text-3xl md:text-4xl font-bold text-slateInk mt-2 mb-3">Technical <span class="italic font-medium text-accentTeal">Toolkit</span> &amp; Strengths</h2>
+                    <p class="text-sm text-slateMuted">Core technical competencies and professional habits brought to every engineering environment.</p>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="bento-card p-7 text-center flex flex-col items-center justify-center">
+                        <div class="skill-icon bg-blue-50 text-accentBlue"><i class="fas fa-code"></i></div>
+                        <h3 class="font-bold text-lg text-slateInk mb-1.5">Web &amp; Programming</h3>
+                        <p class="text-xs text-slateMuted leading-relaxed">HTML, CSS, JavaScript &amp; Core Computer Science</p>
+                    </div>
+                    <div class="bento-card p-7 text-center flex flex-col items-center justify-center">
+                        <div class="skill-icon bg-teal-50 text-accentTeal"><i class="fas fa-puzzle-piece"></i></div>
+                        <h3 class="font-bold text-lg text-slateInk mb-1.5">Problem-Solving</h3>
+                        <p class="text-xs text-slateMuted leading-relaxed">Analytical breakdown and algorithmic logic</p>
+                    </div>
+                    <div class="bento-card p-7 text-center flex flex-col items-center justify-center">
+                        <div class="skill-icon bg-slate-100 text-slateInk"><i class="fas fa-comments"></i></div>
+                        <h3 class="font-bold text-lg text-slateInk mb-1.5">Communication</h3>
+                        <p class="text-xs text-slateMuted leading-relaxed">Clear articulation across technical &amp; non-technical stakeholders</p>
+                    </div>
+                    <div class="bento-card p-7 text-center flex flex-col items-center justify-center">
+                        <div class="skill-icon bg-indigo-50 text-indigo-600"><i class="fas fa-users"></i></div>
+                        <h3 class="font-bold text-lg text-slateInk mb-1.5">Team Management</h3>
+                        <p class="text-xs text-slateMuted leading-relaxed">Collaborative leadership and cross-functional alignment</p>
+                    </div>
+                    <div class="bento-card p-7 text-center flex flex-col items-center justify-center">
+                        <div class="skill-icon bg-slate-100 text-slateInk"><i class="fas fa-list-check"></i></div>
+                        <h3 class="font-bold text-lg text-slateInk mb-1.5">Planning &amp; Execution</h3>
+                        <p class="text-xs text-slateMuted leading-relaxed">Milestone tracking, workflow structuring &amp; follow-through</p>
+                    </div>
+                    <div class="bento-card p-7 text-center flex flex-col items-center justify-center">
+                        <div class="skill-icon bg-blue-50 text-accentBlue"><i class="fas fa-microphone-lines"></i></div>
+                        <h3 class="font-bold text-lg text-slateInk mb-1.5">Public Speaking</h3>
+                        <p class="text-xs text-slateMuted leading-relaxed">Confident technical presentation and project anchoring</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact -->
+        <section id="contact" class="py-24 relative">
+            <div class="container mx-auto px-6 max-w-5xl relative z-10">
+                <div class="bento-card p-8 sm:p-12 md:p-14 bg-white" data-aos="fade-up">
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+                        <div class="lg:col-span-5">
+                            <span class="text-xs font-bold uppercase tracking-widest text-accentBlue">04 — Connect</span>
+                            <h2 class="text-3xl md:text-4xl font-bold text-slateInk mt-2 mb-4">Let's initiate a <span class="italic font-medium text-accentTeal">conversation.</span></h2>
+                            <p class="text-sm text-slateMuted leading-relaxed mb-8">
+                                I am actively seeking internship opportunities, collaborative engineering projects, and professional discussions.
+                            </p>
+
+                            <div class="space-y-3.5">
+                                <a href="mailto:rishika14328@gmail.com" class="flex items-center gap-3.5 p-3.5 rounded-2xl bg-slate-50 border border-slate-200 hover:border-slate-400 transition group">
+                                    <span class="contact-icon bg-blue-50 text-accentBlue"><i class="fas fa-envelope"></i></span>
+                                    <div>
+                                        <p class="text-[11px] font-bold uppercase tracking-wider text-slateMuted">Email</p>
+                                        <p class="text-xs font-bold text-slateInk">rishika14328@gmail.com</p>
+                                    </div>
+                                </a>
+
+                                <a href="https://www.linkedin.com/in/rishika-rathore28/" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3.5 p-3.5 rounded-2xl bg-slate-50 border border-slate-200 hover:border-slate-400 transition group">
+                                    <span class="contact-icon bg-slate-100 text-slateInk"><i class="fab fa-linkedin-in"></i></span>
+                                    <div>
+                                        <p class="text-[11px] font-bold uppercase tracking-wider text-slateMuted">LinkedIn</p>
+                                        <p class="text-xs font-bold text-slateInk">linkedin.com/in/rishika-rathore28</p>
+                                    </div>
+                                </a>
+
+                                <a href="https://github.com/rishikarathore" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3.5 p-3.5 rounded-2xl bg-slate-50 border border-slate-200 hover:border-slate-400 transition group">
+                                    <span class="contact-icon bg-teal-50 text-accentTeal"><i class="fab fa-github"></i></span>
+                                    <div>
+                                        <p class="text-[11px] font-bold uppercase tracking-wider text-slateMuted">GitHub</p>
+                                        <p class="text-xs font-bold text-slateInk">github.com/rishikarathore</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="lg:col-span-7">
+                            <form id="contact-form" class="space-y-4">
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                    <div>
+                                        <label for="name" class="block text-xs font-bold uppercase tracking-wider text-slateInk mb-2">Your Name</label>
+                                        <input type="text" id="name" name="name" required class="w-full px-4 py-3.5 rounded-2xl bg-slate-50 border border-slate-200 text-sm text-slateInk" placeholder="Your name">
+                                    </div>
+                                    <div>
+                                        <label for="email" class="block text-xs font-bold uppercase tracking-wider text-slateInk mb-2">Email Address</label>
+                                        <input type="email" id="email" name="email" required class="w-full px-4 py-3.5 rounded-2xl bg-slate-50 border border-slate-200 text-sm text-slateInk" placeholder="you@example.com">
+                                    </div>
+                                </div>
+                                <div>
+                                    <label for="message" class="block text-xs font-bold uppercase tracking-wider text-slateInk mb-2">Message</label>
+                                    <textarea id="message" name="message" rows="4" required class="w-full px-4 py-3.5 rounded-2xl bg-slate-50 border border-slate-200 text-sm text-slateInk" placeholder="Discuss an opportunity, project, or professional inquiry..."></textarea>
+                                </div>
+                                <button type="submit" class="w-full btn-executive font-bold text-sm py-4 px-8 rounded-full">
+                                    Send Message <i class="fas fa-paper-plane ml-1.5 text-xs"></i>
+                                </button>
+                                <p id="form-status" class="text-xs text-slateMuted" role="status" aria-live="polite"></p>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-10 text-center border-t border-slate-200 bg-white">
+        <div class="container mx-auto px-6">
+            <p class="font-editorial font-bold text-lg text-slateInk mb-2">Rishika Rathore</p>
+            <p class="text-xs text-slateMuted mb-5">Computer Engineering Undergraduate &bull; Indore, India</p>
+            <div class="flex justify-center gap-3 mb-5">
+                <a href="https://www.linkedin.com/in/rishika-rathore28/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://github.com/rishikarathore" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="mailto:rishika14328@gmail.com" class="social-link" aria-label="Email"><i class="fas fa-envelope"></i></a>
+            </div>
+            <p class="text-[11px] text-slateMuted">&copy; <span id="current-year">2026</span> Rishika Rathore. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scroll to top -->
+    <button id="scroll-top" class="fixed bottom-6 right-6 w-11 h-11 bg-slateInk text-white rounded-full shadow-lg flex items-center justify-center opacity-0 pointer-events-none transition-all duration-300 z-50 hover:bg-blue-600" aria-label="Scroll to top">
+        <i class="fas fa-arrow-up text-xs"></i>
+    </button>
+
+    <!-- Load AOS before the external script -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

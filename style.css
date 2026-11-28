@@ -1,0 +1,171 @@
+/* =========================================================
+   RISHIKA RATHORE | PORTFOLIO STYLESHEET
+   ========================================================= */
+
+/* Base */
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    background-color: #F8FAFC;
+    color: #0F172A;
+    background-image: radial-gradient(#CBD5E1 1px, transparent 1px);
+    background-size: 32px 32px;
+}
+
+h1, h2, h3, .font-editorial {
+    font-family: 'Fraunces', serif;
+}
+
+/* Subtle background glows */
+.pro-glow {
+    position: absolute;
+    border-radius: 9999px;
+    filter: blur(90px);
+    opacity: 0.35;
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* Floating navigation */
+.pill-nav {
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(14px);
+    border: 1px solid #E2E8F0;
+    box-shadow: 0 10px 30px -10px rgba(15, 23, 42, 0.08);
+}
+
+.nav-pill-link {
+    transition: all 0.25s ease;
+}
+
+.nav-pill-link.active,
+.nav-pill-link:hover {
+    background-color: #0F172A;
+    color: #FFFFFF;
+}
+
+/* Bento cards */
+.bento-card {
+    background: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(10px);
+    border: 1px solid #E2E8F0;
+    border-radius: 1.5rem;
+    transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+                box-shadow 0.35s ease,
+                border-color 0.35s ease;
+}
+
+.bento-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 40px -15px rgba(15, 23, 42, 0.08);
+    border-color: #CBD5E1;
+}
+
+/* Primary button */
+.btn-executive {
+    background: linear-gradient(135deg, #0F172A 0%, #1E3A8A 100%);
+    color: #FFFFFF;
+    box-shadow: 0 8px 20px -6px rgba(15, 23, 42, 0.25);
+    transition: all 0.3s ease;
+}
+
+.btn-executive:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 26px -6px rgba(15, 23, 42, 0.35);
+    opacity: 0.95;
+}
+
+/* Portrait frame */
+.arch-frame {
+    border-radius: 180px 180px 28px 28px;
+    border: 6px solid #FFFFFF;
+    box-shadow: 0 25px 50px -12px rgba(15, 23, 42, 0.12);
+}
+
+/* Project technology tags */
+.tech-tag {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    background: #F8FAFC;
+    border: 1px solid #E2E8F0;
+    color: #64748B;
+}
+
+/* Skill icons */
+.skill-icon {
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+}
+
+/* Contact icons */
+.contact-icon {
+    width: 2.5rem;
+    height: 2.5rem;
+    flex-shrink: 0;
+    border-radius: 0.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.25s ease;
+}
+
+.group:hover .contact-icon {
+    transform: scale(1.05);
+}
+
+/* Form controls */
+input,
+textarea {
+    outline: none;
+    transition: all 0.25s ease;
+}
+
+input:focus,
+textarea:focus {
+    border-color: #2563EB !important;
+    background-color: #FFFFFF !important;
+    box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.12) !important;
+}
+
+/* Footer social links */
+.social-link {
+    width: 2.25rem;
+    height: 2.25rem;
+    border-radius: 9999px;
+    background: #F1F5F9;
+    color: #0F172A;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.75rem;
+    transition: all 0.25s ease;
+}
+
+.social-link:hover {
+    background: #0F172A;
+    color: #FFFFFF;
+}
+
+/* Respect reduced-motion preferences */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+    }
+}
